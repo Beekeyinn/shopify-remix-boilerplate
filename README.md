@@ -293,3 +293,4 @@ This template uses [Remix](https://remix.run). The following Shopify tools are a
 
 - First This boilerplate uses postgresql for database or datasource for prisma
 - This boiler plate includes: Session, Profile(extra data of shop) and Setting that contains logrocket and crisp for starting
+- Plans are to be written in plan.json file in provided syntax for billing to work
