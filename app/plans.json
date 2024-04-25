@@ -1,0 +1,47 @@
+{
+  "shopifySetupPlans": {
+    "Premium": {
+      "amount": 49.99,
+      "currencyCode": "USD",
+      "interval": "EVERY_30_DAYS",
+      "trialDays": 30
+    },
+    "Pro": {
+      "amount": 29.99,
+      "currencyCode": "USD",
+      "interval": "EVERY_30_DAYS"
+    },
+    "Standard": {
+      "amount": 9.99,
+      "currencyCode": "USD",
+      "interval": "EVERY_30_DAYS"
+    }
+  },
+  "planNames": ["Pro", "Standard", "Premium"],
+  "freePlan": {
+    "name": "Free",
+    "amount": 0,
+    "currencyCode": "USD",
+    "interval": "EVERY_30_DAYS"
+  },
+  "plans": [
+    {
+      "name": "Standard",
+      "amount": 9.99,
+      "currencyCode": "USD",
+      "interval": "EVERY_30_DAYS"
+    },
+    {
+      "name": "Pro",
+      "amount": 29.99,
+      "currencyCode": "USD",
+      "interval": "EVERY_30_DAYS"
+    },
+    {
+      "name": "Premium",
+      "amount": 49.99,
+      "currencyCode": "USD",
+      "interval": "EVERY_30_DAYS"
+    }
+  ]
+}

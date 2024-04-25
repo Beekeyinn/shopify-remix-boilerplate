@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "678c399ba40f151fd7f8f696efd5a5ca"
+name = "remix-test-app"
+handle = "remix-test-app-22"
+application_url = "https://lucy-sox-docs-commission.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "creators-test.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://lucy-sox-docs-commission.trycloudflare.com/auth/callback",
+  "https://lucy-sox-docs-commission.trycloudflare.com/auth/shopify/callback",
+  "https://lucy-sox-docs-commission.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[app_proxy]
+url = "https://lucy-sox-docs-commission.trycloudflare.com/api/v1"
+subpath = "access-pro-remix"
+prefix = "apps"
+
+[pos]
+embedded = false
