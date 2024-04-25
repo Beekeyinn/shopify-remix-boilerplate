@@ -16,6 +16,7 @@ export const afterInstallationJob = async (session, data, plan) => {
     },
     update: {},
   });
+  await prisma.settings.create({ data: { logrocket_key: "" } });
 
   return { profile };
 };

@@ -11,7 +11,7 @@ export const loader = async ({ request }) => {
   });
   console.log("cancel plan", hasActivePayment, appSubscriptions);
 
-  if (!hasActivePayment) {
+  if (hasActivePayment) {
     const subscription = appSubscriptions[0];
     await billing.cancel({
       subscriptionId: subscription.id,
@@ -25,21 +25,6 @@ export const loader = async ({ request }) => {
       data: {
         paid: false,
         subscription: null,
-      },
-    });
-    await prisma.pageViews.update({
-      where: { sessionId: session.id },
-      data: {
-        status: "INACTIVE",
-        charge_id: null,
-        expires_at: null,
-        total_page_views: 0,
-        available_page_views: 0,
-        plans: {
-          connect: {
-            name: "Free",
-          },
-        },
       },
     });
   }

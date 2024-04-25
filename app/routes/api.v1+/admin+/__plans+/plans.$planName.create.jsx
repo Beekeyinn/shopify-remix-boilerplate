@@ -1,4 +1,4 @@
-import { authenticate, shopifyPlansNames } from "../../../../shopify.server";
+import { authenticate } from "../../../../shopify.server";
 
 export const loader = async ({ request, params }) => {
   const {
@@ -9,14 +9,11 @@ export const loader = async ({ request, params }) => {
   // await handlePlanCreation(plan, billing, shop);
   const domain = shop.replace(".myshopify.com", "");
   const { planName } = params;
-  await billing.require({
-    plans: shopifyPlansNames,
-    onFailure: async () =>
-      billing.request({
-        plan: planName,
-        isTest: process.env.PAYMENT_TEST === "true",
-        returnUrl: `https://admin.shopify.com/store/${domain}/apps/${process.env.APP_NAME}/app/plan/redirect`,
-      }),
+
+  await billing.request({
+    plan: planName,
+    isTest: process.env.PAYMENT_TEST === "true",
+    returnUrl: `https://admin.shopify.com/store/${domain}/apps/${process.env.APP_NAME}/app/plan/redirect`,
   });
   return null;
 };

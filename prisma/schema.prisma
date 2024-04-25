@@ -48,4 +48,5 @@ model Settings {
   logrocket     Boolean @default(false)
   logrocket_key String?
   crisp         Boolean @default(false)
+  crispt_key    String?
 }
