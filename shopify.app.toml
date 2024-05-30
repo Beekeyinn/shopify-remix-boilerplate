@@ -3,7 +3,7 @@
 client_id = "678c399ba40f151fd7f8f696efd5a5ca"
 name = "remix-test-app"
 handle = "remix-test-app-22"
-application_url = "https://lucy-sox-docs-commission.trycloudflare.com"
+application_url = "https://hang-apt-des-cw.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,16 +16,16 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://lucy-sox-docs-commission.trycloudflare.com/auth/callback",
-  "https://lucy-sox-docs-commission.trycloudflare.com/auth/shopify/callback",
-  "https://lucy-sox-docs-commission.trycloudflare.com/api/auth/callback"
+  "https://hang-apt-des-cw.trycloudflare.com/auth/callback",
+  "https://hang-apt-des-cw.trycloudflare.com/auth/shopify/callback",
+  "https://hang-apt-des-cw.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
 api_version = "2024-01"
 
 [app_proxy]
-url = "https://lucy-sox-docs-commission.trycloudflare.com/api/v1"
+url = "https://hang-apt-des-cw.trycloudflare.com/api/v1"
 subpath = "access-pro-remix"
 prefix = "apps"
 
